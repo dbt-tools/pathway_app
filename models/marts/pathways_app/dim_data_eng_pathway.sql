@@ -3,11 +3,11 @@ with apps as (
 ),
 
 fellows as (
-    select * from {{ ref('stg_fellow_info') }}
+    select * from {{ ref('stg_name_rename_info') }}
 ),
 
 apps_with_fellow_in_data_eng as (
-    select * from apps join fellows using(email)
+    select * from apps left join fellows using(email)
     where PATHWAY_CHOICE LIKE 'F%'
     order by TECH_STRENGTH
 ),

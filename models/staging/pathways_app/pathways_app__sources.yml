@@ -8,3 +8,5 @@ sources:
     tables: 
       - name: raw 
         description: one record per student 
+      - name: fellow_info 
+        description: one record per student
