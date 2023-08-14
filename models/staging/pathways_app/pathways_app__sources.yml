@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: google_sheets
+    description: data from pathways applications at Marcy 
+    database: PC_FIVETRAN_DB
+    schema: google_sheets 
+    tables: 
+      - name: raw 
+        description: one record per student 
